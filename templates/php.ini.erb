@@ -601,7 +601,7 @@ track_errors = Off
 ; Development Value: On
 ; Production value: Off
 ; http://php.net/html-errors
-html_errors = Off
+html_errors = On
 
 ; If html_errors is set On PHP produces clickable error messages that direct
 ; to a page describing the error or function causing the error in detail.
@@ -636,7 +636,7 @@ html_errors = Off
 ;error_log = php_errors.log
 ; Log errors to syslog (Event Log on NT, not valid in Windows 95).
 ;error_log = syslog
-error_log = <%= @error_log %>
+error_log = /opt/boxen/log/php/5.3.20.error.log
 
 ;;;;;;;;;;;;;;;;;
 ; Data Handling ;
@@ -1013,7 +1013,7 @@ pdo_mysql.cache_size = 2000
 ; Default socket name for local MySQL connects.  If empty, uses the built-in
 ; MySQL defaults.
 ; http://php.net/pdo_mysql.default-socket
-pdo_mysql.default_socket=
+pdo_mysql.default_socket=/opt/boxen/data/mysql/socket
 
 [Phar]
 ; http://php.net/phar.readonly
@@ -1167,7 +1167,7 @@ mysql.default_port =
 ; Default socket name for local MySQL connects.  If empty, uses the built-in
 ; MySQL defaults.
 ; http://php.net/mysql.default-socket
-mysql.default_socket =
+mysql.default_socket = /opt/boxen/data/mysql/socket
 
 ; Default host for mysql_connect() (doesn't apply in safe mode).
 ; http://php.net/mysql.default-host
